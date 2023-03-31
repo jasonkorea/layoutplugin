@@ -5,11 +5,19 @@
     <vendor>jasonkorea</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.jasonkorea.layoutplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+    </extensions>
+    
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="com.github.test.template.WizardTemplateProviderImpl" />
     </extensions>
 
     <applicationListeners>
