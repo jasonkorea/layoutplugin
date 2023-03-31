@@ -38,6 +38,7 @@ intellij {
     version.set(properties("platformVersion"))
     type.set(properties("platformType"))
 
+    intellij.localPath.set(properties("StudioRunPath"))
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins.set(properties("platformPlugins").map { it.split(',').map(String::trim).filter(String::isNotEmpty) })
 }
